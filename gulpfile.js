@@ -61,8 +61,8 @@ gulp.task('connect', function() {
         'port': 4004,
         'livereload': true,
         'root': 'dist/',
-        'host': '0.0.0.0'
-
+        'host': '0.0.0.0',
+        'https': true
     });
 });
 
