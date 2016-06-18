@@ -15,15 +15,16 @@ var gulp = require('gulp'),
 
     connect = require('gulp-connect'),
 
-
+    GulpSSH = require('gulp-ssh'),
 
     browserify = require('browserify'),
     sourcemaps = require('gulp-sourcemaps'),
 
-    autoprefixer2 = require('gulp-autoprefixer');
+    autoprefixer2 = require('gulp-autoprefixer'),
 
+    bower = require('gulp-bower'),
 
-var paths = {
+    paths = {
     js: [
         'bower_components/jquery/dist/jquery.min.js',
         'bower_components/Materialize/dist/js/materialize.min.js'
@@ -33,6 +34,27 @@ var paths = {
     ]
 };
 
+var config = {
+  host: '46.101.141.101',
+  port: 22,
+  username: 'user',
+  password: 'qweqwe'
+};
+
+var gulp_ssh = new GulpSSH({
+  ignoreErrors: false,
+  sshConfig: config
+});
+
+gulp.task('deploy', function () {
+  return gulp_ssh
+    .shell(['cd /home/user/mobile_web', 'git pull --rebase', 'npm install'], {filePath: 'shell.log'})
+    .pipe(gulp.dest('logs'))
+});
+
+gulp.task('bower', function() {
+  return bower();
+});
 
 gulp.task('connect', function() {
     return connect.server({
@@ -121,13 +143,12 @@ gulp.task('copyFonts', ['cleanFonts'], function() {
 
 gulp.task('copy', ['copyImg', 'copyFonts']);
 
-gulp.task('default', [ 'copyFonts', 'copyImg' , 'concat_css' ,'js', 'vendor_js', 'html', 'connect', 'watch']);
+gulp.task('default', [ 'bower', 'copyFonts', 'copyImg' , 'concat_css' ,'js', 'vendor_js', 'html', 'connect', 'watch']);
 
 gulp.task('watch', function() {
     gulp.watch('app/style/**/*.sass', ['sass']);
     gulp.watch('app/js/**/*.js', ['js']);
     gulp.watch('app/**/*.html', ['html']);
     gulp.watch('app/img/**/*', ['copyImg']);
+    gulp.watch('bower.json', ['bower', 'sass', 'js']);
 });
-
-
