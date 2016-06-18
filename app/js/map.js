@@ -5,6 +5,8 @@
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 55.760034, lng: 37.66464699999999},
         scrollwheel: false,
+        zoomControl: false,
+        mapTypeControl: false,
         zoom: 17
     });
     var searchAddress = document.getElementById('searchAddress');
@@ -31,13 +33,13 @@
             map.setCenter(place.geometry.location);
             map.setZoom(17);  // Why 17? Because it looks good.
         }
-        mPos.setIcon(/** @type {google.maps.Icon} */({
-            url: place.icon,
-            size: new google.maps.Size(71, 71),
-            origin: new google.maps.Point(0, 0),
-            anchor: new google.maps.Point(17, 34),
-            scaledSize: new google.maps.Size(35, 35)
-        }));
+        //mPos.setIcon(/** @type {google.maps.Icon} */({
+        //    url: place.icon,
+        //    size: new google.maps.Size(71, 71),
+        //    origin: new google.maps.Point(0, 0),
+        //    anchor: new google.maps.Point(17, 34),
+        //    scaledSize: new google.maps.Size(35, 35)
+        //}));
         mPos.setPosition(place.geometry.location);
         mPos.setVisible(true);
 
