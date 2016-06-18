@@ -69,6 +69,7 @@
             map.setCenter(pos);
             mMy.setPosition(pos);
             mMy.setMap(map);
+
         }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
         });
@@ -85,7 +86,7 @@
     }
 
     // Клик по маркеру машинки
-    mPos.addListener('click', function() {
+    mMy.addListener('click', function() {
 
     });
 
@@ -93,7 +94,7 @@
 }
 
 $.ajax({
-    url: "http://46.101.141.101:3000/cars",
+    url: "https://46.101.141.101:3001/cars",
     dataType: 'json',
     success: function(data){
         console.debug(data)
@@ -106,3 +107,15 @@ $(document).ready(function(){
     }
 
 })
+
+
+var modal_sheet = $(
+    '<div id="modal1" class="modal bottom-sheet">' +
+        '<div class="modal-content">' +
+            '<h4>Modal Header</h4>' +
+
+        '</div>' +
+        '<div class="modal-footer">' +
+            '<a href="" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>' +
+        '</div>'+
+    '</div>')
