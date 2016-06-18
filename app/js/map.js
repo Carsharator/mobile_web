@@ -4,7 +4,7 @@
     var mMy = new google.maps.Marker(), mCars = [], mPos = new google.maps.Marker();
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 55.760034, lng: 37.66464699999999},
-        scrollwheel: false,
+        scrollwheel: true,
         zoomControl: false,
         mapTypeControl: false,
         zoom: 17
@@ -105,7 +105,7 @@
         for (var i = 0; i < dataCars.length; i++) {
             mCars[i] = new google.maps.Marker({map: map, position: {lat: dataCars[i].latitude, lng: dataCars[i].longitude}})
         }
-
+        map.setZoom(12)
         console.debug(mCars)
     }
 
