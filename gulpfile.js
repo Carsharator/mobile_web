@@ -15,7 +15,7 @@ var gulp = require('gulp'),
 
     connect = require('gulp-connect'),
 
-
+    GulpSSH = require('gulp-ssh'),
 
     browserify = require('browserify'),
     sourcemaps = require('gulp-sourcemaps'),
@@ -33,6 +33,24 @@ var gulp = require('gulp'),
         'bower_components/Materialize/dist/css/materialize.min.css'
     ]
 };
+
+var config = {
+  host: '46.101.141.101',
+  port: 22,
+  username: 'user',
+  password: 'qweqwe'
+};
+
+var gulp_ssh = new GulpSSH({
+  ignoreErrors: false,
+  sshConfig: config
+});
+
+gulp.task('deploy', function () {
+  return gulp_ssh
+    .shell(['cd /home/user/mobile_web', 'git pull --rebase'], {filePath: 'shell.log'})
+    .pipe(gulp.dest('logs'))
+});
 
 gulp.task('bower', function() {
   return bower();
@@ -133,5 +151,3 @@ gulp.task('watch', function() {
     gulp.watch('app/**/*.html', ['html']);
     gulp.watch('app/img/**/*', ['copyImg']);
 });
-
-
