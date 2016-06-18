@@ -48,7 +48,7 @@ var gulp_ssh = new GulpSSH({
 
 gulp.task('deploy', function () {
   return gulp_ssh
-    .shell(['cd /home/user/mobile_web', 'git pull --rebase'], {filePath: 'shell.log'})
+    .shell(['cd /home/user/mobile_web', 'git pull --rebase', 'npm install'], {filePath: 'shell.log'})
     .pipe(gulp.dest('logs'))
 });
 
@@ -61,8 +61,8 @@ gulp.task('connect', function() {
         'port': 4004,
         'livereload': true,
         'root': 'dist/',
-        'host': '0.0.0.0'
-
+        'host': '0.0.0.0',
+        'https': true
     });
 });
 
@@ -150,4 +150,5 @@ gulp.task('watch', function() {
     gulp.watch('app/js/**/*.js', ['js']);
     gulp.watch('app/**/*.html', ['html']);
     gulp.watch('app/img/**/*', ['copyImg']);
+    gulp.watch('bower.json', ['bower', 'sass', 'js']);
 });
