@@ -88,5 +88,8 @@
 
 
 $(document).ready(function(){
-    initMap();
+    if(document.getElementById('map')) {
+        initMap();
+    }
+
 })
