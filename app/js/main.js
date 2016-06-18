@@ -5,9 +5,7 @@ $(document).ready(function() {
 
     window.addEventListener("DOMContentLoaded", function() {
         // Grab elements, create settings, etc.
-        var canvas = document.getElementById("canvas"),
-            context = canvas.getContext("2d"),
-            video = document.getElementById("video"),
+        var video = document.getElementById("video"),
             videoObj = { "video": true },
             errBack = function(error) {
                 console.log("Video capture error: ", error.code);
@@ -33,7 +31,26 @@ $(document).ready(function() {
         }
     }, false);
 
-    document.getElementById("snap").addEventListener("click", function() {
-        context.drawImage(video, 0, 0, 640, 480);
-    });
+
+
+    if (document.getElementsByClassName('wrap_camera')) {
+
+        var widthCamBlock = document.getElementsByClassName('wrap_camera')[0].clientWidth;
+        var heightCamBlock = widthCamBlock - (widthCamBlock / 3)
+
+        document.getElementById('video').setAttribute('width', widthCamBlock);
+        document.getElementById('video').setAttribute('height', heightCamBlock);
+
+        $(window).resize(function(){
+            var widthCamBlock = document.getElementsByClassName('wrap_camera')[0].clientWidth;
+            var heightCamBlock = widthCamBlock - (widthCamBlock / 3)
+
+            document.getElementById('video').setAttribute('width', widthCamBlock);
+            document.getElementById('video').setAttribute('height', heightCamBlock);
+        });
+
+    }
+
+
+
 });
