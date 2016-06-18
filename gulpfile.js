@@ -20,10 +20,11 @@ var gulp = require('gulp'),
     browserify = require('browserify'),
     sourcemaps = require('gulp-sourcemaps'),
 
-    autoprefixer2 = require('gulp-autoprefixer');
+    autoprefixer2 = require('gulp-autoprefixer'),
 
+    bower = require('gulp-bower'),
 
-var paths = {
+    paths = {
     js: [
         'bower_components/jquery/dist/jquery.min.js',
         'bower_components/Materialize/dist/js/materialize.min.js'
@@ -33,6 +34,9 @@ var paths = {
     ]
 };
 
+gulp.task('bower', function() {
+  return bower();
+});
 
 gulp.task('connect', function() {
     return connect.server({
@@ -121,7 +125,7 @@ gulp.task('copyFonts', ['cleanFonts'], function() {
 
 gulp.task('copy', ['copyImg', 'copyFonts']);
 
-gulp.task('default', [ 'copyFonts', 'copyImg' , 'concat_css' ,'js', 'vendor_js', 'html', 'connect', 'watch']);
+gulp.task('default', [ 'bower', 'copyFonts', 'copyImg' , 'concat_css' ,'js', 'vendor_js', 'html', 'connect', 'watch']);
 
 gulp.task('watch', function() {
     gulp.watch('app/style/**/*.sass', ['sass']);
