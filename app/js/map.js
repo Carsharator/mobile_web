@@ -2,21 +2,38 @@
     // Create a map object and specify the DOM element for display.
 
     var mMy = new google.maps.Marker(), mCars = [], mPos = new google.maps.Marker();
+
+    var iMy = '../img/me.png';
+    var iCars = '../img/oper_cat1.png';
+    var iPos = 'images/beachflag.png';
+
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 55.760034, lng: 37.66464699999999},
         scrollwheel: true,
         zoomControl: false,
         mapTypeControl: false,
-        zoom: 17
+        zoom: 17,
+        styles: [{
+            "elementType": "geometry",
+            "stylers": [
+                { "visibility": "simplified" },
+                { "weight": 2.9 },
+                { "gamma": 1.49 },
+                { "saturation": 13 },
+                { "lightness": 5 }
+            ]
+        }
+        ]
     });
 
+    var dataCar = []
     $.ajax({
         type: "GET",
         url: "https://46.101.141.101:3001/cars",
         dataType: 'json',
         success: function(data){
-            console.debug(data)
-            drowMarkersCar(data)
+            dataCar = data;
+            drowMarkersCar(dataCar)
         }
     });
 
@@ -79,6 +96,7 @@
             //infoWindow.setContent('Location found.');
             map.setCenter(pos);
             mMy.setPosition(pos);
+            mMy.setIcon(iMy);
             mMy.setMap(map);
             mMy.set("class", "waves-effect waves-light btn modal-trigger");
         }, function() {
@@ -96,17 +114,29 @@
         //    'Error: Your browser doesn\'t support geolocation.');
     }
 
-    // Клик по маркеру машинки
-    mMy.addListener('click', function() {
-
-    });
 
     function drowMarkersCar(dataCars){
         for (var i = 0; i < dataCars.length; i++) {
-            mCars[i] = new google.maps.Marker({map: map, position: {lat: dataCars[i].latitude, lng: dataCars[i].longitude}})
+            mCars[i] = new google.maps.Marker({
+                map: map,
+                position: {lat: dataCars[i].latitude, lng: dataCars[i].longitude},
+                icon: iCars,
+                store_id: dataCars[i]._id,
+                c_id: i
+            });
+            mCars[i].addListener('click', function() {
+                console.log(this);
+                showInfo(this.get('c_id'))
+            });
+
         }
         map.setZoom(12)
         console.debug(mCars)
+    }
+
+    function showInfo(i){
+        $('#modal1').find('.name').text(dataCar[i].model)
+        $('#modal1').openModal();
     }
 
 }
@@ -119,15 +149,3 @@ $(document).ready(function(){
     }
 
 })
-
-
-var modal_sheet = $(
-    '<div id="modal1" class="modal bottom-sheet">' +
-        '<div class="modal-content">' +
-            '<h4>Modal Header</h4>' +
-
-        '</div>' +
-        '<div class="modal-footer">' +
-            '<a href="" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>' +
-        '</div>'+
-    '</div>')
