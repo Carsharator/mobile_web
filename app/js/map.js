@@ -94,6 +94,7 @@
 }
 
 $.ajax({
+    type: "GET",
     url: "https://46.101.141.101:3001/cars",
     dataType: 'json',
     success: function(data){
