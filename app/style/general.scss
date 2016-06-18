@@ -29,3 +29,39 @@ body {
 .gmnoprint {
     display: none !important;
 }
+
+
+
+
+
+
+.wrap_camera {
+    position: relative;
+    padding-top: 110px;
+    padding-bottom: 50px;
+    .top_border_cam {
+        background: url(../img/border_top_cam.png) no-repeat;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 150px;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: 100%;
+    }
+
+    .bottom_border_cam {
+        background: url(../img/border_bottom_cam.png) 0 100% no-repeat;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 150px;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: 100%;
+    }
+    #video {
+        margin-top: -54px;
+        margin-left: 0;
+    }
+}

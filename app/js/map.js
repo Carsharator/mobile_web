@@ -9,7 +9,6 @@
         mapTypeControl: false,
         zoom: 17
     });
-
     var searchAddress = document.getElementById('searchAddress');
 
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(searchAddress);
@@ -102,5 +101,8 @@ $.ajax({
 });
 
 $(document).ready(function(){
-    initMap();
-});
+    if(document.getElementById('map')) {
+        initMap();
+    }
+
+})

@@ -146,7 +146,7 @@ gulp.task('copy', ['copyImg', 'copyFonts']);
 gulp.task('default', [ 'bower', 'copyFonts', 'copyImg' , 'concat_css' ,'js', 'vendor_js', 'html', 'connect', 'watch']);
 
 gulp.task('watch', function() {
-    gulp.watch('app/style/**/*.sass', ['sass']);
+    gulp.watch('app/style/**/*.scss', ['sass']);
     gulp.watch('app/js/**/*.js', ['js']);
     gulp.watch('app/**/*.html', ['html']);
     gulp.watch('app/img/**/*', ['copyImg']);
