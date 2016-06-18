@@ -4,7 +4,7 @@
 
 // files
 
-require('./main');
 require('./map');
+require('./main');
 
 
