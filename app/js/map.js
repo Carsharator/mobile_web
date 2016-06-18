@@ -103,8 +103,10 @@
 
     function drowMarkersCar(dataCars){
         for (var i = 0; i < dataCars.length; i++) {
-            mCars[i] = new google.maps.Marker({map: map, position: new google.maps.LatLng(dataCars[i].latitude, dataCars[i].longitude)})
+            mCars[i] = new google.maps.Marker({map: map, position: {lat: dataCars[i].latitude, lng: dataCars[i].longitude}})
         }
+
+        console.debug(mCars)
     }
 
 }
