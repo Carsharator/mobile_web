@@ -1,0 +1,2295 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!--<link rel="stylesheet" href="../css/vendor.css" media="screen" title="no title" charset="utf-8">-->
+    <link rel="stylesheet" href="../css/project.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../cdn/main.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css"/>
+
+</head>
+<body data-spy="scroll">
+<aside class="left__side col-xs-3" id="left__side">
+    <ul class="left__logo">
+        <li><a href="#">Личный кабинет</a></li>
+    </ul>
+
+    <ul class="menu-items-wrapper js-perfect-scrollbar ps-container ps-theme-default ps-active-y" style="overflow-x: hidden;">
+        <li data-amount="1"><a href="#nav_1">Картографическая основа ЕГРН</a></li>
+        <li data-amount=""><a href="#nav_2">Геодезическая основа ЕГРН</a></li>
+        <li data-amount="1"><a href="#nav_3">История изменений</a></li>
+        <li data-amount="1"><a href="#nav_4">Библиотека стилей</a></li>
+    </ul>
+</aside>
+
+
+<div class="page wrapper">
+
+    <header id="header" class="header col-xs-9 col-xs-offset-3">
+        <div class="row">
+            <div class="header-top clearfix">
+                <div class="top-title pull-left">Арм картографической и геодезической информации</div>
+                <div class="top-notify pull-right"><i>3</i></div>
+                <div class="logout pull-right">Реестрова А.Б. <span>(Райффайзен Банк)</span></div>
+
+            </div>
+        </div>
+    </header>
+
+    <main class="main col-xs-9 col-xs-offset-3">
+        <div class="main__content">
+            <section id="nav_1">
+                <div class="instruction__header">
+                    <h1>
+                        Картографическая основа ЕГРН
+                        <div class="pull-right steps-info"><span class="step-number">10</span> / <span
+                                class="step-quantity">15</span></div>
+                    </h1>
+                </div>
+                <input type="text" class="form-control searchText"
+                       placeholder="Код объекта, наименование, форма представления">
+
+                <table class="table">
+                    <thead>
+                    <tr class="details-control">
+                        <th>#</th>
+                        <th>Код объекта</th>
+                        <th>Наименование</th>
+                        <th>Дата создания</th>
+                        <th>Форма представления</th>
+                        <th>Статус</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">1</th>
+                        <td>1234567</td>
+                        <td>Вид 1</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">2</th>
+                        <td>234567</td>
+                        <td>Вид 2</td>
+                        <td>01-01-2002</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">3</th>
+                        <td>3456789</td>
+                        <td>Вид 3</td>
+                        <td>01-01-2003</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">4</th>
+                        <td>4567890</td>
+                        <td>Вид 4</td>
+                        <td>01-01-2004</td>
+                        <td>Растровая</td>
+                        <td>Статус</td>
+                    </tr>
+                    <tr class="details-control">
+                        <th scope="row">5</th>
+                        <td>7654321</td>
+                        <td>Вид 5</td>
+                        <td>01-01-2001</td>
+                        <td>Векторная</td>
+                        <td>Статус</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+                <div class="row">
+                    <form role="form" class="form-horizontal col-sm-6">
+                        <h3>Управление картографической основой ЕГРН</h3><h4>Создание / Изменение объекта</h4>
+                        <button type="button" class="btn btn-success glyphicon glyphicon-plus"></button>
+                        <button type="button" class="btn btn-danger glyphicon glyphicon-minus"></button>
+                        <div class="form-group">
+                            <label for="code_reg" class="col-lg-2 control-label">Код региона</label>
+
+                            <div class="col-lg-4">
+                                <input type="number" class="form-control" id="code_reg" placeholder="Код региона">
+                            </div>
+                            <label for="code_obj" class="col-lg-2 control-label">Код объекта</label>
+
+                            <div class="col-lg-4">
+                                <input type="number" class="form-control" id="code_obj" placeholder="Код объекта">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="code_pd" class="col-lg-2 control-label">Код набора ПД</label>
+
+                            <div class="col-lg-4">
+                                <input type="number" class="form-control" id="code_pd" placeholder="Код набора ПД">
+                            </div>
+                            <label for="guid" class="col-lg-2 control-label">GUID</label>
+
+                            <div class="col-lg-4">
+                                <input type="number" class="form-control" id="guid" placeholder="GUID">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="name" class="col-lg-2 control-label">Наименование</label>
+
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="name" placeholder="Наименование">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="stat" class="col-lg-2 control-label">Статус</label>
+
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" id="stat" placeholder="Статус">
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Признак актуальности
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="type_obj" class="col-lg-2 control-label">Вид объекта</label>
+
+                            <div class="col-lg-10">
+                                <select class="form-control" id="type_obj">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="scale" class="col-lg-2 control-label">Мастштаб</label>
+
+                            <div class="col-lg-10">
+                                <select class="form-control" id="scale">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                                <label class="label" for="date_create">Дата создания</label>
+                                <input class="input js-datepicker" id="date_create" type="text">
+
+                                <label class="label" for="date_change">Дата изменения</label>
+                                <input class="input js-datepicker" id="date_change" type="text">
+
+                                <label class="label" for="date_exclude">Дата создания</label>
+                                <input class="input js-datepicker" id="date_exclude" type="text">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="form_vis" class="col-lg-2 control-label">Форма предоставления</label>
+
+                            <div class="col-lg-10">
+                                <select class="form-control" id="form_vis">
+                                    <option>Векторная</option>
+                                    <option>Растровая</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="signature" class="col-lg-2 control-label">Поле подписи</label>
+
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="signature" placeholder="Поле подписи">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="obj" class="col-lg-2 control-label">Пространственный объект</label>
+
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="obj" placeholder="Пространственный объект">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="srid" class="col-lg-2 control-label">Истинный SRID</label>
+
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="srid" placeholder="Истинный SRID">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="note" class="col-lg-2 control-label">Примечание</label>
+
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="note" placeholder="Примечание">
+                            </div>
+                        </div>
+                        <h4>Система координат</h4>
+
+                        <div class="form-group">
+                            <label for="coords" class="col-lg-2 control-label">Система координат</label>
+
+                            <div class="col-lg-10">
+                                <select class="form-control" id="coords">
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--<div class="form-group">-->
+                        <!--<label for="coords" class="col-lg-2 control-label">Система координат</label>-->
+                        <!--<div class="col-lg-2">-->
+                        <!--<input type="number" class="form-control" id="coords" placeholder="Система координат">-->
+                        <!--</div>-->
+                        <!--<label for="type_sk" class="col-lg-2 control-label">Тип СК</label>-->
+                        <!--<div class="col-lg-2">-->
+                        <!--<input type="number" class="form-control" id="type_sk" placeholder="Тип СК">-->
+                        <!--</div>-->
+                        <!--<label for="coord_guid" class="col-lg-2 control-label">GUID</label>-->
+                        <!--<div class="col-lg-2">-->
+                        <!--<input type="number" class="form-control" id="coord_guid" placeholder="GUID">-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                        <!--<label for="projection" class="col-lg-2 control-label">Проекция</label>-->
+                        <!--<div class="col-lg-4">-->
+                        <!--<input type="number" class="form-control" id="projection" placeholder="Проекция">-->
+                        <!--</div>-->
+                        <!--<label for="datum" class="col-lg-2 control-label">Датум</label>-->
+                        <!--<div class="col-lg-4">-->
+                        <!--<input type="number" class="form-control" id="datum" placeholder="Датум">-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                        <!--<label for="msk" class="col-lg-2 control-label">Номер МСК, зоны</label>-->
+                        <!--<div class="col-lg-10">-->
+                        <!--<input type="number" class="form-control" id="msk" placeholder="Номер МСК, зоны">-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                        <!--<label for="latitude" class="col-lg-2 control-label">Широта начала</label>-->
+                        <!--<div class="col-lg-4">-->
+                        <!--<input type="number" class="form-control" id="latitude" placeholder="Широта начала">-->
+                        <!--</div>-->
+                        <!--<label for="axial" class="col-lg-2 control-label">Осевой мередиан</label>-->
+                        <!--<div class="col-lg-4">-->
+                        <!--<input type="number" class="form-control" id="axial" placeholder="Осевой мередиан">-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                        <!--<label for="offset_east" class="col-lg-2 control-label">Смещение на восток</label>-->
+                        <!--<div class="col-lg-4">-->
+                        <!--<input type="number" class="form-control" id="offset_east" placeholder="Смещение на восток">-->
+                        <!--</div>-->
+                        <!--<label for="offset_north" class="col-lg-2 control-label">Смещение на север</label>-->
+                        <!--<div class="col-lg-4">-->
+                        <!--<input type="number" class="form-control" id="offset_north" placeholder="Смещение на север">-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                        <!--<label for="ratio" class="col-lg-2 control-label">Коэффициент масштаба</label>-->
+                        <!--<div class="col-lg-4">-->
+                        <!--<input type="number" class="form-control" id="ratio" placeholder="Коэффициент масштаба">-->
+                        <!--</div>-->
+                        <!--<label for="mif" class="col-lg-2 control-label">Описание СК для MIF</label>-->
+                        <!--<div class="col-lg-4">-->
+                        <!--<input type="number" class="form-control" id="mif" placeholder="Описание СК для MIF">-->
+                        <!--</div>-->
+                        <!--</div>-->
+
+                        <div class="wrap_allUserWorker">
+                            <div class="wrap_userWorker">
+                                <h4>Исполнитель</h4>
+
+                                <div class="form-group">
+                                    <label for="pp-lp" class="col-lg-2 control-label">Наименование ЮЛ / ФЛ</label>
+
+                                    <div class="col-lg-4">
+                                        <input type="text" class="form-control" id="pp-lp" placeholder="Наименование ЮЛ / ФЛ">
+                                    </div>
+                                    <label for="position" class="col-lg-2 control-label">Должность ФЛ</label>
+
+                                    <div class="col-lg-4">
+                                        <input type="text" class="form-control" id="position" placeholder="Должность ФЛ">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="address" class="col-lg-2 control-label">Адрес</label>
+
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control" id="address" placeholder="Адрес">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" class="col-lg-2 control-label">Контактный телефон</label>
+
+                                    <div class="col-lg-4">
+                                        <input type="tel" class="form-control" id="phone" placeholder="Контактный телефон">
+                                    </div>
+                                    <label for="mail" class="col-lg-2 control-label">Должность ФЛ</label>
+
+                                    <div class="col-lg-4">
+                                        <input type="text" class="form-control" id="mail" placeholder="e-mail">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="function" class="col-lg-2 control-label">Функции субъекта</label>
+
+                                    <div class="col-lg-4">
+                                        <input type="tel" class="form-control" id="function" placeholder="Функции субъекта">
+                                    </div>
+                                    <label for="role" class="col-lg-2 control-label">Роль субъекта</label>
+
+                                    <div class="col-lg-4">
+                                        <input type="text" class="form-control" id="role" placeholder="Роль субъекта">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <button type="button" class="btn btn-success btn-add_userWorker">Добавить исполнителя</button>
+                        <button type="button" class="btn btn-danger btn-remove_userWorker">Удалить исполнителя</button>
+
+
+                        <div class="">
+                            <div class="alert alert-danger col-sm-12">У вас есть несохраненные изменения. Сохранить?</div>
+                            <button type="button" class="btn btn-success">Сохранить</button>
+                            <button type="button" class="btn btn-danger">Отменить</button>
+
+                        </div>
+                    </form>
+                    <div id="mapid" class="col-sm-6"></div>
+                </div>
+        </section>
+            <section id="nav_2">
+                <div class="instruction__header">
+                    <h1>
+                        Геодезическая основа ЕГРН
+                        <div class="pull-right steps-info"><span class="step-number">10</span> / <span
+                                class="step-quantity">15</span></div>
+                    </h1>
+                </div>
+            </section>
+            <section id="nav_3">
+                <div class="instruction__header">
+                    <h1>
+                        История изменений
+                        <div class="pull-right steps-info"><span class="step-number">10</span> / <span
+                                class="step-quantity">15</span></div>
+                    </h1>
+                </div>
+            </section>
+            <section id="nav_4">
+                <div class="instruction__header">
+                    <h1>
+                        Библиотека стилей
+                        <div class="pull-right steps-info"><span class="step-number">10</span> / <span
+                                class="step-quantity">15</span></div>
+                    </h1>
+                </div>
+            </section>
+        </div>
+</main>
+</div>
+
+
+<footer id="footer" class="container-fluid">
+
+</footer>
+
+</div>
+
+
+<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+
+<script src="../js/vendor.js" type="text/javascript"></script>
+<script src="../js/app.js" type="text/javascript"></script>
+<script src="../cdn/main.min.js" type="text/javascript"></script>
+</body>
+</html>
