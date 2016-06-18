@@ -11,14 +11,14 @@
     });
     var searchAddress = document.getElementById('searchAddress');
 
-    var types = document.getElementById('type-selector');
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(searchAddress);
-    map.controls[google.maps.ControlPosition.TOP_LEFT].push(types);
 
     var autocomplete = new google.maps.places.Autocomplete(searchAddress);
+
     autocomplete.bindTo('bounds', map);
 
-    autocomplete.addListener('searchAddress', function() {
+    autocomplete.addListener('place_changed', function() {
+        console.debug('df')
         mPos.setVisible(false);
         var place = autocomplete.getPlace();
         if (!place.geometry) {
@@ -42,6 +42,7 @@
         //}));
         mPos.setPosition(place.geometry.location);
         mPos.setVisible(true);
+        mPos.setMap(map);
 
         var address = '';
         if (place.address_components) {
@@ -50,6 +51,7 @@
                 (place.address_components[1] && place.address_components[1].short_name || ''),
                 (place.address_components[2] && place.address_components[2].short_name || '')
             ].join(' ');
+            console.debug(address)
         }
 
     });
