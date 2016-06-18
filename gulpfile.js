@@ -115,7 +115,7 @@ gulp.task('copyFonts', ['cleanFonts'], function() {
         "app/fonts/**/*.woff",
         "app/fonts/**/*.woff2"
     ])
-        .pipe(copy('dist/fonts', {prefix: 999}));
+        .pipe(copy('dist/fonts/', {prefix: 999}));
 });
 
 
