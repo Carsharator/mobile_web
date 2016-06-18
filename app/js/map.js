@@ -9,6 +9,17 @@
         mapTypeControl: false,
         zoom: 17
     });
+
+    $.ajax({
+        type: "GET",
+        url: "https://46.101.141.101:3001/cars",
+        dataType: 'json',
+        success: function(data){
+            console.debug(data)
+            drowMarkersCar(data)
+        }
+    });
+
     var searchAddress = document.getElementById('searchAddress');
 
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(searchAddress);
@@ -69,7 +80,7 @@
             map.setCenter(pos);
             mMy.setPosition(pos);
             mMy.setMap(map);
-
+            mMy.set("class", "waves-effect waves-light btn modal-trigger");
         }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
         });
@@ -90,17 +101,15 @@
 
     });
 
+    function drowMarkersCar(dataCars){
+        for (var i = 0; i < dataCars.length; i++) {
+            mCars[i] = new google.maps.Marker({map: map, position: new google.maps.LatLng(dataCars[i].latitude, dataCars[i].longitude)})
+        }
+    }
 
 }
 
-$.ajax({
-    type: "GET",
-    url: "https://46.101.141.101:3001/cars",
-    dataType: 'json',
-    success: function(data){
-        console.debug(data)
-    }
-});
+
 
 $(document).ready(function(){
     if(document.getElementById('map')) {
