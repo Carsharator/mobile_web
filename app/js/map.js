@@ -157,4 +157,7 @@ $(document).ready(function(){
     //    $('.wrap').show(200)
     //}).on('blur',  function(){$('.wrap').hide(200)})
 
+    $(document).on('click', '.filters .ch', function(){$('.filters td a').removeClass('active'); $(this).addClass('active')})
+    $(document).on('click', '.intable tr', function(){$('.intable tr').removeClass('sel'); $(this).addClass('sel')})
+    $(document).on('click', '.block', function(){$('.block').removeClass('sel'); $(this).addClass('sel')})
 })

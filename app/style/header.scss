@@ -59,7 +59,8 @@ nav {
 .filters {
     table {
         tr {
-            line-height: 7vh;
+            line-height: 5vh;
+            font-size: 18px;
             border-bottom: 1px solid rgba(0,0,0,.1);
             td {
                 width: 50%;
@@ -79,18 +80,40 @@ nav {
                         color: #fff;
                     }
                 }
-                table {}
-                tr {
-                    border: 1px solid #77C4D3;
-                    &.sel {
-                        color: #fff;
-                        background: #77C4D3;
-                    }
-                    td {
-                        padding: 0 10px;
+                table.intable {
+                    tr {
+                        cursor: pointer;
+                        border: 1px solid #77C4D3;
+                        &:last-child {border: 1px solid #77C4D3;}
+                        &.sel {
+                            color: #fff;
+                            background: #77C4D3;
+                        }
+                        td {
+                            height: 5vh;
+                            padding: 10px;
+                            line-height: 5vh;
+                            &+td {
+                                font-size: 14px;
+                            }
+                        }
                     }
                 }
+
             }
+            &:last-child {border: none;}
         }
     }
+
 }
+    .btn-aggr.filters {
+        width: 84%;
+        margin: 0 8%;
+        display: inline-block;
+        padding: 10px;
+        line-height: 60px;
+        font-size: 30px;
+        text-align: center;
+        //position: absolute;
+        //bottom: 0px;
+    }

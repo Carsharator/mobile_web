@@ -82,15 +82,23 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     .block {
         width: 49%;
         float: right;
-        //margin: 0 3vw;
         margin: 20px 0;
         text-align: center;
         border-radius: 5px;
+        font-size: 24px;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.50);
+        color: #4A4A4A;
         &+.block {float: left;}
         &:hover {
             background: #cccccc4d;
         }
-
+        &.sel {
+            background: #77C4D3;
+            box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.50);
+            font-size: 24px;
+            color: #FFFFFF;
+        }
     }
     .modal-close.btn {
         width: 100%;
