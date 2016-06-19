@@ -186,6 +186,7 @@ $(document).ready(function() {
 
     $(document).on('click', '.btn-bronirovanie', function() {
         $('.wrap_modal_1').hide();
+        $('.wrap_modal_3').hide();
         $('.wrap_modal_2').show();
 
         var price = $('.wrap_modal_1 .sel .price').text() || $('.wrap_modal_1 .sel .price-x2').text();
@@ -197,9 +198,19 @@ $(document).ready(function() {
 
     $(document).on('click', '.btn-bronirovanie-off', function() {
         $('.wrap_modal_2').hide();
+        $('.wrap_modal_3').hide();
         $('.wrap_modal_1').show();
     });
 
-    
+    $(document).on('click', '.btn-open-car', function() {
+        $('.wrap_modal_2').hide();
+        $('.wrap_modal_1').hide();
+        $('.wrap_modal_3').show();
+        var price = $('.wrap_modal_1 .sel .price').text() || $('.wrap_modal_1 .sel .price-x2').text();
+        var strah = $('.wrap_modal_1 .sel .strah').text();
+
+        $('.wrap_modal_3 .price').text(price);
+        $('.wrap_modal_3 .strah').text(strah);
+    });
 
 });
