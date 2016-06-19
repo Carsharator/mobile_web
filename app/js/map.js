@@ -5,7 +5,7 @@
 
     var iMy = '../img/me.png';
     var iCars = '../img/oper_cat1.png';
-    var iPos = 'images/beachflag.png';
+    var iPos = '../img/pos.png';
 
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 55.760034, lng: 37.66464699999999},
@@ -71,6 +71,7 @@
         mPos.setPosition(place.geometry.location);
         mPos.setVisible(true);
         mPos.setMap(map);
+        mPos.set('icon', iPos);
 
         var address = '';
         if (place.address_components) {
@@ -135,7 +136,11 @@
     }
 
     function showInfo(i){
-        $('#modal1').find('.name').text(dataCar[i].model)
+        console.debug(dataCar[i])
+        $('#modal1 .name').text(dataCar[i].model)
+        $('#modal1 .number').text(dataCar[i].number)
+        $('#modal1 .price').text(dataCar[i].price + ' руб. / минута')
+        $('#modal1 .price-x2').text(dataCar[i].price * 2 + ' руб. / минута')
         $('#modal1').openModal();
     }
 
@@ -144,20 +149,12 @@
 
 
 $(document).ready(function(){
-
-
+    //alert(window.innerWidth)
     if(document.getElementById('map')) {
-        $.ajax({
-            url: "http://46.101.141.101:3000/cars",
-            dataType: 'json',
-            success: function(data){
-                console.debug(data)
-            }
-        });
-
-
-
         initMap();
     }
+    //$("#searchAddress").on('focus', function(){
+    //    $('.wrap').show(200)
+    //}).on('blur',  function(){$('.wrap').hide(200)})
 
 })

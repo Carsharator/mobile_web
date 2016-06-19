@@ -15,16 +15,88 @@ body {
     font-size: inherit;
 }
 
+
+
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] { font-size: 16px; }
 #searchAddress {
     padding: 0 2vw !important;
+    width: 90vw;
+    margin: 5vw;
+    height: 60px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid rgba(157,189,198,0.09);
+    box-shadow: 0px 0px 10px 0px rgba(173,181,183,0.87);
+    border-radius: 3px;
+}
+.wrap {
+    display: none;
+    position: absolute;
+    z-index: 10;
     width: 100vw;
-    height: 20vh;
-    background: #fff;
+    height: 100vh;
+    background: rgba(255,255,255,.5);
+}
+.pac-container {
+    margin-top: 20px;
+
+}
+.pac-item {
+    cursor: default;
+    padding: 0 4px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 60px !important;
+    text-align: left;
+    border-top: 1px solid #e6e6e6;
+    font-size: 11px;
+    color: #999;
+    .pac-icon {
+        display: none;
+    }
+}
+.hdpi.pac-logo:after {
+    display: none !important;
 }
 #map {
-
+    width: 100vw;
+    height: calc(100vh - 100px);
 }
+#modal1 {
+    max-height: none !important;
+    .number, .reg {
+        padding: 10px 20px;
+        border: 1px solid;
+        border-bottom-left-radius: 3px;
+        border-top-left-radius: 3px;
+        display: inline-block;
+    }
+    .reg {
+        border-radius: 0;
+        border-bottom-right-radius: 3px;
+        border-top-right-radius: 3px;
+        border-left: none;
+    }
+    .block {
+        width: 49%;
+        float: right;
+        //margin: 0 3vw;
+        margin: 20px 0;
+        text-align: center;
+        border-radius: 5px;
+        &+.block {float: left;}
+        &:hover {
+            background: #cccccc4d;
+        }
 
+    }
+    .modal-close.btn {
+        width: 100%;
+        text-align: center;
+    }
+}
 
 .gmnoprint {
     display: none !important;
