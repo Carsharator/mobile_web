@@ -142,9 +142,37 @@
         $('#modal1 .price').text(dataCar[i].price + ' руб. / минута')
         $('#modal1 .price-x2').text(dataCar[i].price * 2 + ' руб. / минута')
         $('#modal1').openModal();
+        drowRoute(i)
     }
 
+
+    function drowRoute(i) {
+        var directionsDisplay = new google.maps.DirectionsRenderer({
+            map: map,
+            suppressMarkers: true
+        });
+        var request = {
+            destination: {lat: dataCar[i].latitude, lng: dataCar[i].longitude},
+            origin: {lat: dataCar[i].destination_latitude, lng: dataCar[i].destination_longitude},
+            travelMode: google.maps.TravelMode.DRIVING
+        };
+        var directionsService = new google.maps.DirectionsService();
+        directionsService.route(request, function (response, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+                // Display the route on the map.
+                directionsDisplay.setDirections(response);
+                var leg = response.routes[0].legs[0];
+                new google.maps.Marker({
+                    position: leg.end_location,
+                    map: map,
+                    icon: iCars,
+                    title: title
+                });
+            }
+        })
+    }
 }
+
 
 
 
