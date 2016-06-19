@@ -21,7 +21,7 @@ $(document).ready(function() {
             if (this.readyState != 4) return;
 
             localStorage.setItem("USER", this.responseText);
-            window.location.href = 'views/lk.html';
+            window.location.href = 'views/map.html';
 
         };
 
@@ -184,6 +184,22 @@ $(document).ready(function() {
         
     }
 
+    $(document).on('click', '.btn-bronirovanie', function() {
+        $('.wrap_modal_1').hide();
+        $('.wrap_modal_2').show();
 
+        var price = $('.wrap_modal_1 .sel .price').text() || $('.wrap_modal_1 .sel .price-x2').text();
+        var strah = $('.wrap_modal_1 .sel .strah').text();
+
+        $('.wrap_modal_2 .price').text(price);
+        $('.wrap_modal_2 .strah').text(strah);
+    });
+
+    $(document).on('click', '.btn-bronirovanie-off', function() {
+        $('.wrap_modal_2').hide();
+        $('.wrap_modal_1').show();
+    });
+
+    
 
 });
