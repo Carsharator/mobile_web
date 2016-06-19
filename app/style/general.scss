@@ -140,13 +140,23 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
         -o-background-size: cover;
         background-size: 100%;
     }
+
     #video {
         margin-top: -54px;
         margin-left: 0;
     }
+
+    #canvas {
+        margin-top: -54px;
+        margin-left: 0;
+        padding: 0 50px;
+    }
 }
 
-
+#snap{
+    position: relative;
+    left: 11.5px;
+}
 .wrap_form_authorization {
     margin-top: 15vw;
 }
