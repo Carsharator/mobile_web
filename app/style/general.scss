@@ -53,6 +53,9 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     border-top: 1px solid #e6e6e6;
     font-size: 11px;
     color: #999;
+    .pac-icon {
+        display: none;
+    }
 }
 .hdpi.pac-logo:after {
     display: none !important;
@@ -60,7 +63,21 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 #map {
     width: 100vw;
 }
-
+#modal1 {
+    .number, .reg {
+        padding: 10px 20px;
+        border: 1px solid;
+        border-bottom-left-radius: 3px;
+        border-top-left-radius: 3px;
+        display: inline-block;
+    }
+    .reg {
+        border-radius: 0;
+        border-bottom-right-radius: 3px;
+        border-top-right-radius: 3px;
+        border-left: none;
+    }
+}
 
 .gmnoprint {
     display: none !important;

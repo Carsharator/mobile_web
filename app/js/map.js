@@ -5,7 +5,7 @@
 
     var iMy = '../img/me.png';
     var iCars = '../img/oper_cat1.png';
-    var iPos = 'images/beachflag.png';
+    var iPos = '../img/pos.png';
 
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 55.760034, lng: 37.66464699999999},
@@ -71,6 +71,7 @@
         mPos.setPosition(place.geometry.location);
         mPos.setVisible(true);
         mPos.setMap(map);
+        mPos.set('icon', iPos);
 
         var address = '';
         if (place.address_components) {
@@ -135,7 +136,10 @@
     }
 
     function showInfo(i){
+        console.debug(dataCar[i])
         $('#modal1 .name').text(dataCar[i].model)
+        $('#modal1 .number').text(dataCar[i].number)
+        //$('#modal1 .reg').text(dataCar[i].number)
         $('#modal1').openModal();
     }
 
@@ -148,8 +152,8 @@ $(document).ready(function(){
     if(document.getElementById('map')) {
         initMap();
     }
-    $("#searchAddress").on('focus', function(){
-        $('.wrap').show(200)
-    }).on('blur',  function(){$('.wrap').hide(200)})
+    //$("#searchAddress").on('focus', function(){
+    //    $('.wrap').show(200)
+    //}).on('blur',  function(){$('.wrap').hide(200)})
 
 })
