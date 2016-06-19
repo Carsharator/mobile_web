@@ -23,7 +23,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     padding: 0 2vw !important;
     width: 90vw;
     margin: 5vw;
-    height: 46px;
+    height: 100px;
     box-sizing: border-box;
     background: #FFFFFF;
     border: 1px solid rgba(157,189,198,0.09);
@@ -48,7 +48,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    line-height: 44px !important;
+    line-height: 100px !important;
     text-align: left;
     border-top: 1px solid #e6e6e6;
     font-size: 11px;
