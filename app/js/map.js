@@ -92,16 +92,22 @@
 
 }
 
-$.ajax({
-    url: "http://46.101.141.101:3000/cars",
-    dataType: 'json',
-    success: function(data){
-        console.debug(data)
-    }
-});
+
 
 $(document).ready(function(){
+
+
     if(document.getElementById('map')) {
+        $.ajax({
+            url: "http://46.101.141.101:3000/cars",
+            dataType: 'json',
+            success: function(data){
+                console.debug(data)
+            }
+        });
+
+
+
         initMap();
     }
 

@@ -15,46 +15,52 @@
         <br><br>
         <h1 class="header center orange-text">Регистрация</h1>
         <div class="row">
-            <form class="col s10  offset-s1">
+            <form class="col s10  offset-s1" name="newUser">
                 <div class="row">
                     <div class="input-field col s4">
-                        <input id="first_name" type="text" class="validate">
+                        <input id="first_name" type="text" name="first_name" class="validate">
                         <label for="first_name">Имя</label>
                     </div>
                     <div class="input-field col s4">
-                        <input id="sur_name" type="text" class="validate">
+                        <input id="sur_name" type="text" name="last_name" class="validate">
                         <label for="sur_name">Фамилия</label>
                     </div>
                     <div class="input-field col s4">
-                        <input id="patronymic_name" type="text" class="validate">
+                        <input id="patronymic_name" type="text" name="patronymic_name" class="validate">
                         <label for="patronymic_name">Отчество</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
-                        <input id="login_name" type="text" class="validate">
+                        <input id="login_name" type="text" name="login" class="validate">
                         <label for="login_name">Логин</label>
                     </div>
                     <div class="input-field col s6">
-                        <input id="password" type="password" class="validate">
+                        <input id="password" type="password" name="password" class="validate">
                         <label for="password">Пароль</label>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field col s4">
-                        <input id="phone" type="tel" class="validate">
+                    <div class="input-field col s6">
+                        <input id="phone" type="tel" name="phone" class="validate">
                         <label for="phone">Телефон</label>
                     </div>
-                    <div class="input-field col s4">
-                        <input id="driver_number" type="text" class="validate">
+                    <div class="input-field col s6">
+                        <input id="email" type="email" name="email" class="validate">
+                        <label for="email">Электронный адрес</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="driver_number" type="text" name="license_number" class="validate">
                         <label for="driver_number">Номер водительского удостоверения</label>
                     </div>
-                    <div class="input-field col s4">
-                        <input id="driver_number_time" type="text" class="validate">
+                    <div class="input-field col s6">
+                        <input id="driver_number_time" type="text" name="license_valid_until" class="validate">
                         <label for="driver_number_time">Срок дейстивя водительского удостоверения</label>
                     </div>
                 </div>
-                <button href="/" class="btn-large waves-effect waves-light orange">Регистрация</button>
+                <a href="#" class="btn-large waves-effect waves-light orange">Регистрация</a>
             </form>
         </div>
 
