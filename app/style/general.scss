@@ -77,6 +77,19 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
         border-top-right-radius: 3px;
         border-left: none;
     }
+    .block {
+        width: 49%;
+        float: right;
+        //margin: 0 3vw;
+        margin: 20px 0;
+        text-align: center;
+        border-radius: 5px;
+        &+.block {float: left;}
+        &:hover {
+            background: #cccccc4d;
+        }
+
+    }
 }
 
 .gmnoprint {
