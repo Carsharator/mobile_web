@@ -91,6 +91,9 @@ nav {
                         }
                         td {
                             padding: 0 10px;
+                            &+td {
+                                font-size: 14px;
+                            }
                         }
                     }
                 }
