@@ -60,6 +60,7 @@ nav {
     table {
         tr {
             line-height: 7vh;
+            font-size: 30px;
             border-bottom: 1px solid rgba(0,0,0,.1);
             td {
                 width: 50%;
@@ -99,6 +100,8 @@ nav {
         width: 98%;
         display: inline-block;
         padding: 10px;
+        line-height: 60px;
+        font-size: 30px;
         text-align: center;
         margin-left: 1%;
     }
