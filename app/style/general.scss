@@ -62,6 +62,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 }
 #map {
     width: 100vw;
+    height: calc(100vh - 100px);
 }
 #modal1 {
     max-height: none !important;

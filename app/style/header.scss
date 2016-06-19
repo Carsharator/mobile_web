@@ -3,7 +3,10 @@ nav {
     border-top: 30px solid #333745;
     height: 100px;
     width: 100vw;
-    margin-left: -9%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
     .brand-logo {
         width: 210px;
         height: 39px;
