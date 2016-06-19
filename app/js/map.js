@@ -135,7 +135,7 @@
     }
 
     function showInfo(i){
-        $('#modal1').find('.name').text(dataCar[i].model)
+        $('#modal1 .name').text(dataCar[i].model)
         $('#modal1').openModal();
     }
 
@@ -144,6 +144,7 @@
 
 
 $(document).ready(function(){
+    //alert(window.innerWidth)
     if(document.getElementById('map')) {
         initMap();
     }

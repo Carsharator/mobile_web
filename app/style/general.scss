@@ -15,14 +15,38 @@ body {
     font-size: inherit;
 }
 
+
+
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] { font-size: 16px; }
 #searchAddress {
     padding: 0 2vw !important;
-    width: 100vw;
+    width: 90vw;
+    margin: 5vw;
     height: 20vh;
-    background: #fff;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid rgba(157,189,198,0.09);
+    box-shadow: 0px 0px 10px 0px rgba(173,181,183,0.87);
+    border-radius: 3px;
+}
+.pac-item {
+    cursor: default;
+    padding: 0 4px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 44px !important;
+    text-align: left;
+    border-top: 1px solid #e6e6e6;
+    font-size: 11px;
+    color: #999;
+}
+.hdpi.pac-logo:after {
+    display: none !important;
 }
 #map {
-
+    width: 100vw;
 }
 
 
