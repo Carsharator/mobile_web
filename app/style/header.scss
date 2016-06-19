@@ -6,7 +6,7 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
+    //z-index: 2;
     .brand-logo {
         width: 210px;
         height: 39px;
@@ -14,5 +14,9 @@ nav {
         background: #fff url(../img/mobile_logo-2x.png) no-repeat center center;
         background-size: contain;
         margin-top: 20px;
+    }
+    .material-icons {
+        color: #333745;
+        margin-left: 2vw;
     }
 }
