@@ -128,6 +128,7 @@
             });
             mCars[i].addListener('click', function() {
                 console.log(this);
+                $('.container').attr('data-id', this.get('c_id'))
                 showInfo(this.get('c_id'))
             });
 
@@ -169,6 +170,11 @@
             }
         })
     }
+
+    $('.btn-qqqq').on('click', function(){
+        var id = $('.container').attr('data-id')
+        drowRoute(id)
+    })
 }
 
 
@@ -196,4 +202,5 @@ $(document).ready(function(){
         $(this).addClass('sel')
        
     })
+
 })
