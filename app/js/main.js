@@ -112,7 +112,10 @@ $(document).ready(function() {
 
         window.addEventListener("DOMContentLoaded", function() {
             // Grab elements, create settings, etc.
-            var video = document.getElementById("video"),
+            var canvas = document.getElementById("canvas"),
+                context = canvas.getContext("2d"),
+
+                video = document.getElementById("video"),
                 videoObj = { "video": true },
                 errBack = function(error) {
                     console.log("Video capture error: ", error.code);
@@ -138,20 +141,47 @@ $(document).ready(function() {
             }
         }, false);
 
+
+
+
         var widthCamBlock = document.getElementsByClassName('wrap_camera')[0].clientWidth;
         var heightCamBlock = widthCamBlock - (widthCamBlock / 3)
 
         document.getElementById('video').setAttribute('width', widthCamBlock);
         document.getElementById('video').setAttribute('height', heightCamBlock);
 
+        var widthCamBlock2 = document.getElementsByClassName('wrap_camera')[1].clientWidth - 100;
+        var heightCamBlock2 = widthCamBlock2 - (widthCamBlock2 / 2)
+
+        document.getElementById('canvas').setAttribute('width', widthCamBlock2);
+        document.getElementById('canvas').setAttribute('height', heightCamBlock2);
+
         $(window).resize(function(){
+            var canvas = document.getElementById("canvas");
+                
             var widthCamBlock = document.getElementsByClassName('wrap_camera')[0].clientWidth;
             var heightCamBlock = widthCamBlock - (widthCamBlock / 3)
 
             document.getElementById('video').setAttribute('width', widthCamBlock);
             document.getElementById('video').setAttribute('height', heightCamBlock);
+
+            var widthCamBlock2 = document.getElementsByClassName('wrap_camera')[1].clientWidth - 100;
+            var heightCamBlock2 = widthCamBlock2 - (widthCamBlock2 / 2)
+
+            document.getElementById('canvas').setAttribute('width', widthCamBlock2);
+            document.getElementById('canvas').setAttribute('height', heightCamBlock2);
+            
+            document.getElementById("snap").addEventListener("click", function() {
+                context = canvas.getContext("2d");
+                context.drawImage(video, 0, 0, widthCamBlock2, heightCamBlock2);
+            });
         });
 
+        document.getElementById("snap").addEventListener("click", function() {
+            context = canvas.getContext("2d");
+            context.drawImage(video, 0, 0, widthCamBlock2, heightCamBlock2);
+        });
+        
     }
 
 
