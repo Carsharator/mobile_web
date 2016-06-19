@@ -5,6 +5,7 @@
 
     var iMy = '../img/me.png';
     var iCars = '../img/oper_cat1.png';
+    var iCars_2 = '../img/oper_cat2.png';
     var iPos = '../img/pos.png';
 
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -26,7 +27,7 @@
         ]
     });
 
-    var dataCar = []
+    var dataCar = [];
     $.ajax({
         type: "GET",
         url: "https://46.101.141.101:3001/cars",
@@ -144,7 +145,32 @@
         $('#modal1').openModal();
     }
 
+
+    function drowRoute(i) {
+        var directionsDisplay = new google.maps.DirectionsRenderer({
+            map: map,
+            suppressMarkers: true
+        });
+        var request = {
+            destination: {lat: dataCar[i].latitude, lng: dataCar[i].longitude},
+            origin: {lat: dataCar[i].destination_latitude, lng: dataCar[i].destination_longitude},
+            travelMode: google.maps.TravelMode.DRIVING
+        };
+        var directionsService = new google.maps.DirectionsService();
+        directionsService.route(request, function (response, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+                // Display the route on the map.
+                directionsDisplay.setDirections(response);
+                new google.maps.Marker({
+                    position: {lat: dataCar[i].destination_latitude, lng: dataCar[i].destination_longitude},
+                    map: map,
+                    icon: iCars_2
+                });
+            }
+        })
+    }
 }
+
 
 
 
