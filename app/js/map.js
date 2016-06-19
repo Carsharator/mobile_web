@@ -143,7 +143,6 @@
         $('#modal1 .price').text(dataCar[i].price + ' руб. / минута')
         $('#modal1 .price-x2').text(dataCar[i].price * 2 + ' руб. / минута')
         $('#modal1').openModal();
-        drowRoute(i)
     }
 
 
