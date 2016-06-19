@@ -20,9 +20,8 @@ $(document).ready(function() {
         xhr.onreadystatechange = function() {
             if (this.readyState != 4) return;
 
-
             localStorage.setItem("USER", this.responseText);
-            window.location.href = 'https://localhost:4004/views/lk.html';
+            window.location.href = 'views/lk.html';
 
         };
 
@@ -76,14 +75,14 @@ $(document).ready(function() {
         xhr.onreadystatechange = function() {
             if (this.readyState != 4) return;
 
-            console.log( this.responseText );
+            localStorage.setItem("USER", this.responseText);
+            window.location.href = '/views/lk.html';
         };
 
 
         xhr.onerror = function() {
             console.log( 'Ошибка ' + this.status );
         };
-        console.log(dataToJson);
 
         var data2 = "first_name=" +  first_name + "&last_name=" + sur_name + "&patronymic_name=" + patronymic_name + "&license_number=" + driver_number + "&login=" +login_name+ "&password=" +password+ "&phone=" +phone+ "&email" +email+ "&license_valid_until=" + driver_number_time;
         xhr.send(data2);
@@ -94,11 +93,15 @@ $(document).ready(function() {
 
     if(window.location.href.search('lk.html') != -1 ) {
         var objStorage = JSON.parse(localStorage.USER);
-        console.log(objStorage)
 
-
-        $('.user i').next().text(objStorage.user.login)
-
+        $('.user .name').text(objStorage.user.login);
+        $('table .first_name').text(objStorage.user.first_name);
+        $('table .last_name').text(objStorage.user.last_name);
+        $('table .patronymic_name').text(objStorage.user.patronymic_name);
+        $('table .license_number').text(objStorage.user.license_number);
+        $('table .login').text(objStorage.user.login);
+        $('table .distance').text(objStorage.user.distance);
+        $('table .spent').text(objStorage.user.spent);
     }
 
 
