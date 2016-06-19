@@ -6,7 +6,10 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
+    //z-index: 2;
+    .side-nav {
+        width: 300px;
+    }
     .brand-logo {
         width: 210px;
         height: 39px;
@@ -14,5 +17,80 @@ nav {
         background: #fff url(../img/mobile_logo-2x.png) no-repeat center center;
         background-size: contain;
         margin-top: 20px;
+    }
+    .button-collapse .material-icons {
+        color: #333745;
+        margin-left: 2vw;
+    }
+    .side-nav {
+        .material-icons {
+            vertical-align: bottom;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .avatar {
+            a {
+                line-height: 30px;
+                display: inline-block;
+                vertical-align: bottom;
+                background: #333745;
+                height: 90px;
+                color: #fff;
+                font-size: 14px;
+                padding: 15px;
+            }
+            span {
+                display: inline-block;
+                float: left;
+                width: 60px;
+                height: 60px;
+                margin-right: 10px;
+                background: url(../img/ava.png) no-repeat center center;
+                background-size: contain;
+            }
+        }
+    }
+}
+
+.clear {
+    clear: both;
+}
+
+.filters {
+    table {
+        tr {
+            line-height: 7vh;
+            border-bottom: 1px solid rgba(0,0,0,.1);
+            td {
+                width: 50%;
+                &+td {
+                    text-align: right;
+                }
+                .ch {
+                    border: 1px solid #77C4D3;
+                    padding: 10px;
+                    margin: 0;
+                    width: 50%;
+                    float: left;
+                    color: #77C4D3;
+                    display: inline-block;
+                    &.active {
+                        background: #77C4D3;
+                        color: #fff;
+                    }
+                }
+                table {}
+                tr {
+                    border: 1px solid #77C4D3;
+                    &.sel {
+                        color: #fff;
+                        background: #77C4D3;
+                    }
+                    td {
+                        padding: 0 10px;
+                    }
+                }
+            }
+        }
     }
 }

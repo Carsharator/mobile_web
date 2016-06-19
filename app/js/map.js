@@ -131,7 +131,7 @@
             });
 
         }
-        map.setZoom(12)
+        map.setZoom(15)
         console.debug(mCars)
     }
 
