@@ -64,6 +64,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     width: 100vw;
 }
 #modal1 {
+    max-height: none !important;
     .number, .reg {
         padding: 10px 20px;
         border: 1px solid;
@@ -89,6 +90,10 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
             background: #cccccc4d;
         }
 
+    }
+    .modal-close.btn {
+        width: 100%;
+        text-align: center;
     }
 }
 
