@@ -148,5 +148,8 @@ $(document).ready(function(){
     if(document.getElementById('map')) {
         initMap();
     }
+    $("#searchAddress").on('focus', function(){
+        $('.wrap').show(200)
+    }).on('blur',  function(){$('.wrap').hide(200)})
 
 })
